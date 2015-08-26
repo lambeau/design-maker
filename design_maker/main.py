@@ -1,8 +1,2 @@
-
-
-def main():
+def initialize():
     pass
-
-
-if __name__ == '__main__':
-    main()
