@@ -1,2 +1,5 @@
+from turtle import *
+
+
 def initialize():
-    pass
+    speed(0)
