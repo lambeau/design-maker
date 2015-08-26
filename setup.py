@@ -5,5 +5,5 @@ setup(name='design-maker',
       author='',
       author_email='',
       url='',
-      packages=['design-maker'],
+      packages=['design_maker'],
       test_suite='tests')
