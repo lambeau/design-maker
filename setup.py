@@ -6,4 +6,5 @@ setup(name='design-maker',
       author_email='',
       url='',
       packages=['design_maker'],
-      test_suite='tests')
+      test_suite='tests',
+      entry_points={'console_scripts': ['main = design_maker.main:main']})
