@@ -15,4 +15,4 @@ The plan is for there to be a library of patterns that is randomly combined in s
 This creates a regular polygon by specifying the circumradius and number of sides. Circles are drawn with a diameter equal to the edge length at each of the corners.
 ![alt text][polygon_of_circles]
 
-[polygon_of_circles]: https://githumb.com/lambeau/design-maker/raw/develop/examples/polygon_of_circles.png "Polygon created from circles"
+[polygon_of_circles]: https://raw.githubusercontent.com/lambeau/design-maker/develop/examples/polygon_of_circles.png "Polygon created from circles"
