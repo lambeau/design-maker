@@ -6,7 +6,7 @@ from design_maker import manager
 class ManagerTest(unittest.TestCase):
 
     def setUp(self):
-        manager.Manager.__instance = None
+        manager.Manager._instance = None
 
     def test_singleton(self):
         m1 = manager.Manager()
@@ -18,9 +18,6 @@ class ManagerTest(unittest.TestCase):
         m1 = manager.Manager()
         m2 = manager.Manager()
         self.assertEqual(1, mock_turtle.setup.call_count)
-
-    def test_zmock_leak(self):
-        self.assertFalse(isinstance(manager.Manager().pen, MagicMock))
 
     def test_state_preservation(self):
         m1 = manager.Manager()
