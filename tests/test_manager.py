@@ -22,14 +22,10 @@ class ManagerTest(unittest.TestCase):
     def test_state_preservation(self):
         m1 = manager.Manager()
         start_state = m1.get_state()
-        m1.forward(50)
-        m1.left(100)
-        end_state = m1.get_state()
-        m2 = manager.Manager()
-        m1.reset()
+        with m1 as temp_manager:
+            temp_manager.forward(50)
+            self.assertNotEqual(start_state, m1.get_state())
         self.assertEqual(start_state, m1.get_state())
-        self.assertEqual(end_state, m2.get_state())
-        self.assertNotEqual(start_state, m2.get_state())
 
 
 if __name__ == '__main__':

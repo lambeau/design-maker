@@ -16,17 +16,16 @@ class Manager(object):
             Manager._instance.pen.hideturtle()
         return Manager._instance
 
-    def __init__(self):
-        self.state = (self.pen.position(), self.pen.heading())
+    def __enter__(self):
+        self._enter_state = self.get_state()
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.pen.setposition(self._enter_state[0])
+        self.pen.setheading(self._enter_state[1])
 
     def get_state(self):
-        return self.state
+        return (self.pen.position(), self.pen.heading())
 
     def forward(self, x):
-        pass
-
-    def left(self, x):
-        pass
-
-    def reset(self):
-        pass
+        self.pen.forward(x)
