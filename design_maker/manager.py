@@ -17,4 +17,16 @@ class Manager(object):
         return Manager.__instance
 
     def __init__(self):
+        self.state = (self.pen.position(), self.pen.heading())
+
+    def get_state(self):
+        return self.state
+
+    def forward(self, x):
+        pass
+
+    def left(self, x):
+        pass
+
+    def reset(self):
         pass
